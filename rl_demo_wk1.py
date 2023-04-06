@@ -53,9 +53,6 @@ def average3r():
         avg = avg + ( rand.gauss(0, 1) - avg ) / i
     print('avg3r', avg)
 
-
-
-
 if __name__ == '__main__':
     average1()
     average2()
@@ -63,4 +60,4 @@ if __name__ == '__main__':
     average1r()
     average2r()
     average3r()
-    
+
