@@ -15,6 +15,8 @@ import random as rand
 
 N = 4
 
+seed = rand.random()
+
 def average1():
     sum = 0
     for i in range(1, N):
@@ -34,20 +36,26 @@ def average3():
         avg = avg + ( i - avg ) / i
     print('avg3', avg)
 
-def average1r():
+def average1r( seed = None ):
+    if ( seed != None ):
+        rand.seed( seed )
     sum = 0
     for i in range(1, N):
         sum += rand.gauss(0, 1)
     avg = sum / (N-1)
     print('avg1r', avg)
 
-def average2r():
+def average2r( seed = None ):
+    if ( seed != None ):
+        rand.seed( seed )
     avg = 0
     for i in range(1, N):
         avg = avg * (i-1)/i + rand.gauss(0, 1) / i
     print('avg2r', avg)
 
-def average3r():
+def average3r( seed = None ):
+    if ( seed != None ):
+        rand.seed( seed )
     avg = 0
     for i in range(1, N):
         avg = avg + ( rand.gauss(0, 1) - avg ) / i
@@ -57,7 +65,7 @@ if __name__ == '__main__':
     average1()
     average2()
     average3()
-    average1r()
-    average2r()
-    average3r()
+    average1r(seed)
+    average2r(seed)
+    average3r(seed)
 
