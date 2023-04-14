@@ -1,4 +1,10 @@
 '''
+Joe Granville
+Advanced Computing and Machine Learning
+Machine Learning
+2023/04/13
+Machine Learning Workshop #1
+
 computing averages and 1-armed bandit
 
 3 ways to compute averages
